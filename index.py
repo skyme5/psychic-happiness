@@ -8,10 +8,13 @@ from slack_sdk import WebClient
 import requests
 from flask_apscheduler import APScheduler
 
+from dotenv import load_dotenv
+
 # set configuration values
 class Config:
     SCHEDULER_API_ENABLED = True
 
+load_dotenv()
 
 lastfm_user = os.environ["LASTFM_USERNAME"]
 lastfm_token = os.environ["LASTFM_TOKEN"]
